@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features/"},
+        features = {"src/test/resources/features/sendMoney.feature"},
         plugin = {"pretty", "html:target/cucumber"},
         glue = {"stepdefs"})
-public class RunTest {
+public class RunSendMoneyTest {
 
 }

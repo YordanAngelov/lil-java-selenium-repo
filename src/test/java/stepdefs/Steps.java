@@ -15,14 +15,18 @@ public class Steps {
 
     @Before
     public void startBrowser() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 5);
+        if (driver != null) {
+            assert true;
+        } else {
+            driver = new ChromeDriver();
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            wait = new WebDriverWait(driver, 5);
+        }
     }
 
     @After
     public void closeBrowser() {
-        driver.quit();
+//        driver.quit();
     }
 
 }
