@@ -30,9 +30,9 @@ public class TheInternetSteps {
         formAuthentication.authenticate();
     }
 
-    @When("I fail to authenticate myself")
-    public void failToAuthenticateMyself() {
-        formAuthentication.authenticate();
+    @When("I fail to authenticate myself due to (invalid password|invalid username)")
+    public void failToAuthenticateMyself(String s) {
+        formAuthentication.failToAuthenticate(s);
     }
 
     @Then("I will be logged in")

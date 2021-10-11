@@ -2,6 +2,7 @@ package stepdefs;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,16 +16,15 @@ public class Steps {
 
     @Before
     public void startBrowser() {
-        if (driver != null) {
-            assert true;
-        } else {
+        if (driver == null) {
+//            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             wait = new WebDriverWait(driver, 5);
         }
     }
 
-    @After
+    @AfterClass
     public void closeBrowser() {
 //        driver.quit();
     }

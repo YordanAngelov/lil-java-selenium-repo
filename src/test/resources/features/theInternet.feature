@@ -11,11 +11,11 @@ Feature: Testing the Internet... all of it!
   Scenario: Logging into the Internet with an invalid password
     Given I navigate to the Internet
     When I go to Form Authentication
-    And I fail to authenticate myself
+    And I fail to authenticate myself due to invalid password
     Then I will not be logged in because of invalid password
 
   Scenario: Logging into the Internet with an invalid username
     Given I navigate to the Internet
     When I go to Form Authentication
-    And I fail to authenticate myself
+    And I fail to authenticate myself due to invalid username
     Then I will not be logged in because of invalid username
