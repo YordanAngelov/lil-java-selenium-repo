@@ -5,7 +5,8 @@ Prerequisites:
 * You need to have chromedriver installed (https://chromedriver.chromium.org/)
 
 WIP:
-* Trying to add WebDriverManager (https://github.com/bonigarcia/webdrivermanager)
+* Add WebDriverManager to simplify driver management (https://github.com/bonigarcia/webdrivermanager)
+* Adding screenshot capability
 
 Known issues:
 * Doesn't record time properly
